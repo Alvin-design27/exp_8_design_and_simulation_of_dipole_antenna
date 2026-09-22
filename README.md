@@ -91,68 +91,26 @@ The antenna is usually fed at the centre gap using a **lumped port** or a **wave
 
 ## Observations
 
-### Table 1: Simulated S-Parameter and VSWR Response across Frequency Band
+<img width="1600" height="899" alt="WhatsApp Image 2026-09-07 at 13 33 42 (1)" src="https://github.com/user-attachments/assets/73b9755a-d8ed-432a-ac8c-89bed092f4df" />
+<img width="1600" height="899" alt="WhatsApp Image 2026-09-07 at 13 33 42 (2)" src="https://github.com/user-attachments/assets/8721fe6b-e260-4abd-a979-0611c371f488" />
 
-| Frequency (GHz) | Return Loss $S_{11}$ (dB) | VSWR | Input Impedance $Z_{\text{in}}\ (\Omega)$ | Performance Status |
-| :---: | :---: | :---: | :---: | :---: |
-| 2.20 | -1.82 | 9.61 | $14.2 - j98.5$ | Out of band |
-| 2.30 | -4.65 | 3.82 | $25.6 - j51.2$ | Low reflection matching |
-| 2.38 | -10.05 | 1.92 | $39.8 - j18.4$ | Lower -10 dB edge |
-| 2.40 | -12.42 | 1.63 | $43.2 - j11.8$ | Acceptable match |
-| 2.42 | -16.10 | 1.37 | $46.8 - j6.2$ | High match |
-| **2.449 ($f_0$)** | **-23.15** | **1.15** | **$48.2 - j1.6$** | **Optimal Resonance (Peak)** |
-| 2.48 | -16.50 | 1.35 | $53.1 + j5.4$ | High match |
-| 2.52 | -10.02 | 1.93 | $58.9 + j19.2$ | Upper -10 dB edge |
-| 2.60 | -4.10 | 4.35 | $69.4 + j55.8$ | Low reflection matching |
-| 2.70 | -1.65 | 10.60 | $88.1 + j104.2$ | Out of band |
-
----
-
-### Table 2: Simulated Radiation and Directivity Characteristics (at $f_0 = 2.45\text{ GHz}$)
-
-| Parameter | Simulated Value | Theoretical Limit (Thin Dipole) | Unit |
-| :--- | :---: | :---: | :---: |
-| Resonant Frequency ($f_0$) | **2.449** | 2.450 | GHz |
-| Minimum Return Loss ($S_{11}$)| **-23.15** | $< -10.0$ | dB |
-| Voltage Standing Wave Ratio (VSWR) | **1.15** | $1.0 - 2.0$ | Dimensionless |
-| Input Impedance ($Z_{\text{in}}$) | **$48.2 - j1.6$** | $73.1 + j42.5$ | $\Omega$ |
-| Peak Gain | **2.11** | — | dBi |
-| Peak Directivity ($D_0$) | **2.14** | 2.15 | dBi |
-| Radiation Efficiency ($\eta_{\text{rad}}$) | **98.6** | 100.0 | % |
-| -10 dB Impedance Bandwidth | **140** ($2.38 - 2.52$) | $\approx 5 - 8\%$ | MHz |
-| Half-Power Beamwidth (HPBW, E-Plane) | **78.2** | 78.0 | Degrees ($^\circ$) |
-| Half-Power Beamwidth (HPBW, H-Plane) | **360.0** (Omnidirectional) | 360.0 | Degrees ($^\circ$) |
-
----
-
-## Calculations
-
-### 1. Free-Space Wavelength ($\lambda_0$)
-$$\lambda_0 = \frac{c}{f_0} = \frac{3 \times 10^8\text{ m/s}}{2.45 \times 10^9\text{ Hz}} = 0.12245\text{ m} = \mathbf{122.45\text{ mm}}$$
-
-### 2. Physical Resonant Length ($L$)
-Using the velocity reduction/end-effect factor $k = 0.96$:
-$$L = k \times \frac{\lambda_0}{2} = 0.96 \times \frac{122.45\text{ mm}}{2} = \mathbf{58.78\text{ mm}}$$
-* Arm length ($l_{\text{arm}}$):
-  $$l_{\text{arm}} = \frac{L - g}{2} = \frac{58.78\text{ mm} - 1.00\text{ mm}}{2} = \mathbf{28.89\text{ mm each}}$$
-
-### 3. Fractional Impedance Bandwidth (BW)
-$$\text{BW}_{\%} = \left( \frac{f_2 - f_1}{f_0} \right) \times 100\% = \left( \frac{2.52\text{ GHz} - 2.38\text{ GHz}}{2.449\text{ GHz}} \right) \times 100\% = \frac{0.140}{2.449} \times 100\% \approx \mathbf{5.72\%}$$
-
-### 4. Directivity ($D_0$) to Gain ($G_0$) Validation
-$$G_0 = \eta_{\text{rad}} \times D_0 = 0.986 \times 10^{\frac{2.14}{10}} = 0.986 \times 1.637 = 1.614 \implies 10 \log_{10}(1.614) \approx \mathbf{2.11\text{ dBi}}$$
 
 
 ### Graphs
 
 * S11 vs frequency
-*(Include your own graph)*
+<img width="1600" height="899" alt="WhatsApp Image 2026-09-07 at 13 33 42" src="https://github.com/user-attachments/assets/940d2d45-9ab9-4e6f-82fb-d1caae76885d" />
+
 
 * VSWR vs frequency
-*(Include your own graph)*
+<img width="1600" height="899" alt="WhatsApp Image 2026-09-07 at 13 33 42 (4)" src="https://github.com/user-attachments/assets/c0ea32ae-add0-4925-8fb1-fede51a7cdbd" />
 
 * 2-D E-plane and H-plane radiation patterns
-*(Include your own graph)*
+
+
+<img width="1623" height="666" alt="Screenshot 2026-09-13 093541" src="https://github.com/user-attachments/assets/a5e1f18e-996a-47b7-bcef-11dd12605305" />
+
+
 ---
 
 ## Precautions
@@ -164,12 +122,14 @@ $$G_0 = \eta_{\text{rad}} \times D_0 = 0.986 \times 10^{\frac{2.14}{10}} = 0.986
 
 ## Result
  
+Resonant Frequency = 2.4GHz  
 
-* **Resonant Frequency:** `2.449 GHz`
-* **Return Loss ($S_{11}$):** `-23.15 dB`
-* **VSWR:** `1.15`
-* **Gain:** `2.11 dBi`
+Return loss = -20dB
+
+VSWR = 1.22
+
+Gain = 2.15DBI
 
 ## Conclusion
 
-A half-wave dipole antenna was designed and simulated at ______ GHz using Ansys HFSS.
+A half-wave dipole antenna was designed and simulated at ___2.4___ GHz using Ansys HFSS.
